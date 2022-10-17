@@ -1,0 +1,66 @@
+git config  --global user.name "Varlamov Andrei"
+
+
+git config  --global user.email varlamcheg@inbox.ru
+git config --list //q-for exit
+
+cd mkdir
+echo "Some text" > file.txt
+ls // spisok filov v papke
+cat file.txt // chtenie
+rm file.txt // delete
+
+git init // make git repozitoriy
+ls -la       //see secret directory and filesgit
+ls -Force   //(Powershell)
+
+Основаня ветка - main //git branch -m <name>
+
+git status //index status
+
+Раб дир - файлы и папки
+Индекс - файлы до того как мы хотим их сохранить в репозиторий / подготовка к сохр
+Репозиторий - сохраняются все версии и комиты-указатели на опр версии
+
+Working dir                 staging area            repository
+Рабочая директория          Индекс                  Репозиторий
+
+git add .              ->   Индекс
+
+                            git commit         ->   Репозиторий
+                            (сохр изменений)
+
+            <-------------------------------------- git checkout
+                   (перейти к опр версии проекта)
+
+
+git add commit checkout
+
+Status:     Untracked(неотслеживаемый)- ф-лы кот-е только добавили
+            Staged(Подготовленный) - в индексе/ для сохр в изменений
+            Unmodified - git status не увидим названия фйла - не изменен
+            Modified
+
+Объекты гит:
+            Blob - file
+            Tree - papka
+            Commit - commit(когда сохраняем тек версии проекта)
+            Annotated tag - аннотированный тег
+
+каждый обьект имеет уникальный хэш SHA1
+вх.данные -> SHA1 hash-func -> 4432...234-> Фиксированная длина 160 бит(40 шестнадцетиричных символов)
+
+Коммит - указатель на дерево
+
+перемещая HEAD - перемещаемся меж комитами и видим другую историю
+обычно HEAD - указатель на ветку Main а ветка ссылка на коммит
+
+    git status - текущее состояние репозитория
+    git add <file name>
+    git commit -m "<message>"
+    git log                             //история изменений комитов
+    git checkout <commit hash> //переxод на опр версию проекта по SHA1 хэшу коммита
+//видим изменения в раб директории
+    git checkout <branch name>
+
+
