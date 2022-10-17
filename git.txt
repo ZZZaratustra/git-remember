@@ -109,4 +109,13 @@ Status:     Untracked(неотслеживаемый)- ф-лы кот-е тол�
     ls
     git status
         git add .
+        git status
+    git commit -m "Second commit"
+        git status
+        git log //2 commita - last sverhu
 
+
+            cd ../..   //на две папки назад
+
+        git log
+        git checkout cf1c8e
