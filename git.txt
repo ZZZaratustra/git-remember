@@ -57,10 +57,56 @@ Status:     Untracked(неотслеживаемый)- ф-лы кот-е тол�
 
     git status - текущее состояние репозитория
     git add <file name>
-    git commit -m "<message>"
+    git commit -m "<message>" // -m - make mess in cmd
     git log                             //история изменений комитов
     git checkout <commit hash> //переxод на опр версию проекта по SHA1 хэшу коммита
 //видим изменения в раб директории
     git checkout <branch name>
 
+
+    git add .
+    git status
+    git commit -m "First commit"
+    git status
+    git log
+         cd .git
+         ls
+         cd objects
+         ls
+         git log //cf... - начало хэша
+         cd cf
+         ls
+         git log // первые два cf - потом остальное название файла
+         cat 1c8e3b8d6152dfc778faeb529f58136b631eb9 //бинарная хня
+               //читаем содерж объектов гит
+            git cat-file -t cf1c8e3 //читаем содерж объектов гит
+                //commit
+            git cat-file -p cf1c8e3
+                //tree e547107f081ef0e4a2340004f15d1868a80173da
+                //author Varlamov Andrei <varlamcheg@inbox.ru> 1666038034 +0300
+                //committer Varlamov Andrei <varlamcheg@inbox.ru> 1666038034 +0300
+            //СМОТРИМ НА ДЕРЕВО
+            git cat-file -t e547107
+                //tree
+            git cat-file -p e547107
+                //040000 tree 46308d3c547a3f9473092e9281d56b9c572da26e    .idea
+                //100644 blob ac54b20c20ff83adb2de7931356bf8b207cbe555    first-file.txt
+                //040000 tree 32ef472c6b7a64d9f397090249af49dc12c896e2    first-subfolder
+                //100644 blob 932f35fac460ae62441558f0f6ef6fac6ab0f312    git.txt
+            //СМОТРИМ БЛОБ
+                git cat-file -t 932f35fac460
+                    //blob
+                git cat-file -p 932f35fac460
+                    //to chto vnutri txt
+    rm first-file.txt
+    git status
+    mkdir second-subfolder
+    cd second-subfolder
+    echo "Fourth file text" > fourth-file.txt
+    echo "Fifth file text" > fifth-file.txt
+    ls
+    cd ..
+    ls
+    git status
+        git add .
 
