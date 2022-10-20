@@ -119,3 +119,13 @@ Status:     Untracked(неотслеживаемый)- ф-лы кот-е тол�
 
         git log
         git checkout cf1c8e
+        //Ветка -ссылка на коммит
+    Создание ветки
+        git branch <branch name>
+        git checkout -b <branch name> // создаст ветку и перейдет
+        git branch - все ветки
+        git branch -m <new branch name>
+        git branch -d <branch name> //текущую удалить нельзя
+    Слияие веток
+        //merge commit
+    !!!!    git merge <feature branch name> // feature c текущей(receiving branch)
