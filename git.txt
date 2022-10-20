@@ -144,3 +144,5 @@ git branch -a // все ветки включая удаленный репоз�
 git checkout <branch name>
 
 git remote add origin <url>
+
+git push -u origin main //-u - upstream
