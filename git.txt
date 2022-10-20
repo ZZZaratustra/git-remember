@@ -132,3 +132,15 @@ Status:     Untracked(неотслеживаемый)- ф-лы кот-е тол�
         //merge commit
     !!!!    git merge <feature branch name> // feature c текущей(receiving branch)
 >>>>>>> new-feature
+
+git push //on remote
+git pull //on local
+
+git clone <url>
+origin - имя удаленного репозитория по умолчанию
+git pull  // скачиваем изменения
+
+git branch -a // все ветки включая удаленный репозиторий
+git checkout <branch name>
+
+git remote add origin <url>
